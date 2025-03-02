@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update    # 负责 entity 到数据表的创建
+  jackson:
+    property-naming-strategy: SNAKE_CASE  # 驼峰转下划线
+    serialization:
+      write-dates-as-timestamps: true     # 转成时间戳
+
+wx:
+  appid: xxx
+  appsecret: xxx
+  mchid: xxx
+  code2session: https://api.weixin.qq.com/sns/jscode2session?appid={0}&secret={1}&js_code={2}&grant_type=authorization_code
+
+score:
+  api-package: pers.leanfeng.score.controller
+  year-codes: A,B,C,D,E,F,G,H,I,J,K,L     # 十二年

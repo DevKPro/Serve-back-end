@@ -1,0 +1,47 @@
+server:
+  port: 6688
+spring:
+  datasource:
+    url: mysql的url
+    username: xxx
+    password: xxx
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  data:
+    redis:
+      port: 6379
+      localhost: 127.0.0.1
+      database: 15
+      password:
+      listen-pattern: __keyevent@15__:expired
+
+rocketmq:
+  consumer:
+    consumer-group: xxx
+  producer:
+    producer-group: xxx
+  namesrv-addr: 127.0.0.1:9876
+  topic: Order
+
+
+
+listen-together:
+  security:
+    jwt-key: xxx
+    password-key: xxx
+    token-expired-in: 86400000
+  order:
+    max-sku-limit: 999
+    pay-time-limit: 3600
+    pay-call-back-host: 微信支付官网查
+    pay-call-back-path: /payment/wx/notify # 回调 API
+    merchant-id: xxx
+    private-key-path: xxx/xxx
+    merchant-serial-number: xx
+    api-v3-key: xxx
+
